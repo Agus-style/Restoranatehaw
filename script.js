@@ -1,20 +1,24 @@
+// Fungsi untuk menampilkan tab yang dipilih
 function showTab(tabName) {
+  // Ambil semua tab konten dan sembunyikan
   const tabs = document.querySelectorAll('.tab-content');
-  const buttons = document.querySelectorAll('.tab-button');
-
   tabs.forEach(tab => {
-    tab.classList.remove('active');
+    tab.style.display = 'none';
   });
+
+  // Ambil semua tombol tab dan hapus kelas 'active'
+  const buttons = document.querySelectorAll('.tab-button');
   buttons.forEach(button => {
     button.classList.remove('active');
   });
 
-  document.getElementById(tabName).classList.add('active');
+  // Tampilkan tab yang dipilih dan beri kelas 'active' pada tombol yang dipilih
+  document.getElementById(tabName).style.display = 'block';
   const activeButton = document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`);
   activeButton.classList.add('active');
 }
 
-// Set default tab to food
-document.addEventListener('DOMContentLoaded', () => {
+// Set tab 'food' sebagai default yang terlihat
+document.addEventListener("DOMContentLoaded", () => {
   showTab('food');
 });
