@@ -5,14 +5,14 @@ const foodItems = [
   {
     id: 1,
     name: "Sop Iga Rempah",
-    description: "Sop Dengan Rempah Menghangatkan Tubuh",
+    description: "Sop dengan rempah yang menghangatkan tubuh.",
     price: 55000,
     image: "/img/food/Sop_iga.jpg",
   },
   {
     id: 2,
     name: "Nasi Lemak Rendang",
-    description: "Nasi gurih khas Minang .",
+    description: "Nasi gurih khas Minang.",
     price: 30000,
     image: "/img/food/nasilmr.jpg",
   },
@@ -22,7 +22,7 @@ const drinkItems = [
   {
     id: 101,
     name: "Jus Buah Naga",
-    description: "Teh manis dingin yang menyegarkan.",
+    description: "Jus buah naga segar yang menyegarkan.",
     price: 18000,
     image: "/img/drink/jusnaga.jpg",
   },
