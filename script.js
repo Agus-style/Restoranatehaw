@@ -1,13 +1,10 @@
-function showTab(tabId) {
-  const tabs = document.querySelectorAll('.tab-content');
+function showTab(tab) {
+  const contents = document.querySelectorAll('.tab-content');
   const buttons = document.querySelectorAll('.tab-button');
 
-  tabs.forEach(tab => tab.style.display = 'none');
-  buttons.forEach(btn => btn.classList.remove('active'));
+  contents.forEach((content) => (content.style.display = 'none'));
+  buttons.forEach((button) => button.classList.remove('active'));
 
-  document.getElementById(tabId).style.display = 'block';
-  event.target.classList.add('active');
+  document.getElementById(tab).style.display = 'block';
+  document.querySelector(`.tab-button[onclick="showTab('${tab}')"]`).classList.add('active');
 }
-
-// Default tab
-document.getElementById('food').style.display = 'block';
