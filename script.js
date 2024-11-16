@@ -1,14 +1,20 @@
-function showTab(tabId) {
-  // Get all tab contents and buttons
-  const contents = document.querySelectorAll(".tab-content");
-  const buttons = document.querySelectorAll(".tab-button");
+function showTab(tabName) {
+  const tabs = document.querySelectorAll('.tab-content');
+  const buttons = document.querySelectorAll('.tab-button');
 
-  // Hide all contents and deactivate buttons
-  contents.forEach((content) => {
-    content.style.display = content.id === tabId ? "block" : "none";
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+  });
+  buttons.forEach(button => {
+    button.classList.remove('active');
   });
 
-  buttons.forEach((button) => {
-    button.classList.toggle("active", button.textContent.toLowerCase() === tabId);
-  });
+  document.getElementById(tabName).classList.add('active');
+  const activeButton = document.querySelector(`.tab-button[onclick="showTab('${tabName}')"]`);
+  activeButton.classList.add('active');
 }
+
+// Set default tab to food
+document.addEventListener('DOMContentLoaded', () => {
+  showTab('food');
+});
