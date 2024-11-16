@@ -4,13 +4,13 @@ import MenuItemCard from "../components/MenuItemCard";
 
 // Data menu
 const foodItems = [
-  { id: 1, name: "Nasi Goreng", description: "Nasi dengan bumbu spesial", price: 25000, image: "/img/nasi-goreng.jpg" },
-  { id: 2, name: "Mie Ayam", description: "Mie dengan topping ayam", price: 20000, image: "/img/mie-ayam.jpg" },
+  { id: 1, name: "Sop Iga Rempah", description: "Sop dengan Rempah Yang Menghangatkan Tubuh", price: 55000, image: "/img/food/Sop_iga.jpg" },
+  { id: 2, name: "Nasi Lemak Rendang", description: "Nasi lemak Rendang Khas Minang", price: 50000, image: "/img/food/Nasilemr.jpg" },
 ];
 
 const drinkItems = [
-  { id: 101, name: "Es Teh", description: "Teh manis dingin", price: 5000, image: "/img/es-teh.jpg" },
-  { id: 102, name: "Jus Alpukat", description: "Jus alpukat segar", price: 15000, image: "/img/jus-alpukat.jpg" },
+  { id: 101, name: "Jus Buah Naga", description: "Jus Buah naga segar", price: 18000, image: "/img/drink/jusnaga.jpg" },
+  { id: 102, name: "Jus Stroberi", description: "Jus stroberi segar", price: 18000, image: "/img/drink/jus-stober.jpg" },
 ];
 
 export default function Menu() {
