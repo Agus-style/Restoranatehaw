@@ -1,41 +1,44 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 
-export const Tabs = ({
-  children,
-}: {
-  children: (activeTab: string, setActiveTab: (value: string) => void) => ReactNode;
-}) => {
+export function Tabs({ children }: { children: Function }) {
   const [activeTab, setActiveTab] = useState("food");
+
   return <div>{children(activeTab, setActiveTab)}</div>;
-};
+}
 
-export const TabsList = ({ children }: { children: ReactNode }) => (
-  <div className="flex">{children}</div>
-);
+export function TabsList({ children, className }: { children: any; className: string }) {
+  return <div className={className}>{children}</div>;
+}
 
-export const TabsTrigger = ({
+export function TabsTrigger({
   value,
-  children,
   onClick,
+  className,
+  children,
 }: {
   value: string;
-  children: ReactNode;
-  onClick: (value: string) => void;
-}) => (
-  <button
-    className="px-4 py-2 font-bold"
-    onClick={() => onClick(value)}
-  >
-    {children}
-  </button>
-);
+  onClick: Function;
+  className: string;
+  children: string;
+}) {
+  return (
+    <button
+      onClick={() => onClick(value)}
+      className={`focus:outline-none transition-all duration-300 ${className}`}
+    >
+      {children}
+    </button>
+  );
+}
 
-export const TabsContent = ({
+export function TabsContent({
   value,
   activeTab,
   children,
 }: {
   value: string;
   activeTab: string;
-  children: ReactNode;
-}) => (value === activeTab ? <div>{children}</div> : null);
+  children: any;
+}) {
+  return activeTab === value ? <div>{children}</div> : null;
+}
