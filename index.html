@@ -1,65 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu Restoran</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <img src="Img/logo/logo.png" alt="Logo Restoran" class="logo" />
-    <h1>Menu Restoran Kami</h1>
-    <p>Temukan makanan dan minuman favorit Anda</p>
-  </header>
+<html lang="id">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Website dengan Desain Modern</title>
+	<link rel="stylesheet" href="styles.css">
+  </head>
+  <!DOCTYPE html>
+  <html lang="id">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Website dengan Desain Modern</title>
+	  <link rel="stylesheet" href="styles/styles.css">
+	</head>
+	<body>
 
-  <div class="tabs">
-    <button class="tab-button active" onclick="showTab('food')">Makanan</button>
-    <button class="tab-button" onclick="showTab('drink')">Minuman</button>
-  </div>
+	  <!-- Header -->
+	  <header>
+		<img class="logo" src="logo.png" alt="Logo" />
+		<h1>Selamat Datang di Website Kami</h1>
+		<p>Explore berbagai fitur dan produk kami</p>
+	  </header>
 
-  <div id="food" class="tab-content">
-    <div class="menu-grid">
-      <div class="card">
-        <img src="Img/food/Sop_iga.jpg" alt="Sop Iga Rempah" />
-        <div class="card-content">
-          <h2>Sop Iga Rempah</h2>
-          <p>Sop iga dengan rempah hangat</p>
-          <p class="price">Rp 55,000</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="Img/food/nasilmr.jpg" alt="Nasi Lemak Rendang" />
-        <div class="card-content">
-          <h2>Nasi Lemak Rendang</h2>
-          <p>Nasi khas Minang dengan rendang</p>
-          <p class="price">Rp 50,000</p>
-        </div>
-      </div>
-    </div>
-  </div>
+	  <!-- Tabs -->
+	  <div class="tabs">
+		<button class="tab-button active" data-target="tab1">Menu Makanan</button>
+		<button class="tab-button" data-target="tab2">Menu Minuman</button>
+		<button class="tab-button" data-target="tab3">Tentang Kami</button>
+	  </div>
 
-  <div id="drink" class="tab-content" style="display: none;">
-    <div class="menu-grid">
-      <div class="card">
-        <img src="Img/drink/jus-stober.jpg" alt="Jus Strawberry" />
-        <div class="card-content">
-          <h2>Jus Strawberry</h2>
-          <p>Jus segar dari buah strawberry</p>
-          <p class="price">Rp 18,000</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="Img/drink/jusnaga.jpg" alt="Jus Naga" />
-        <div class="card-content">
-          <h2>Jus Naga</h2>
-          <p>Jus segar dari buah naga</p>
-          <p class="price">Rp 18,000</p>
-        </div>
-      </div>
-    </div>
-  </div>
+	  <!-- Tab Content -->
+	  <div id="tab1" class="tab-content active">
+		<div class="menu-grid">
+		  <div class="card">
+			<img src="makanan1.jpg" alt="Makanan 1">
+			<h2>Nasi Goreng</h2>
+			<p>Deskripsi nasi goreng yang lezat.</p>
+			<p class="price">Rp 30.000</p>
+		  </div>
+		  <div class="card">
+			<img src="makanan2.jpg" alt="Makanan 2">
+			<h2>Ayam Bakar</h2>
+			<p>Deskripsi ayam bakar yang gurih.</p>
+			<p class="price">Rp 40.000</p>
+		  </div>
+		</div>
+	  </div>
 
-  <script src="script.js"></script>
-</body>
+	  <div id="tab2" class="tab-content">	
+		<div class="menu-grid">
+		  <div class="card">
+			<img src="minuman1.jpg" alt="Minuman 1">
+			<h2>Es Teh Manis</h2>
+			<p>Deskripsi es teh manis yang segar.</p>
+			<p class="price">Rp 10.000</p>
+		  </div>
+		  <div class="card">
+			<img src="minuman2.jpg" alt="Minuman 2">
+			<h2>Kopi Hitam</h2>
+			<p>Deskripsi kopi hitam yang nikmat.</p>
+			<p class="price">Rp 15.000</p>
+		  </div>
+		</div>
+	  </div>
+
+	  <div id="tab3" class="tab-content">
+		<h2>Tentang Kami</h2>
+		<p>Informasi tentang restoran/cafe kami, sejarah, dan visi misi.</p>
+
+		<!-- Foto Kami -->
+		<div class="about-photo">
+		  <img src="about-us.jpg" alt="Foto Tentang Kami">
+		</div>
+
+		<!-- Sosial Media Links -->
+		<div class="social-media">
+		  <h3>Ikuti Kami di Sosial Media</h3>
+		  <ul>
+            <li><a href="https://www.instagram.com/username" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/username" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/username" target="_blank">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/username" target="_blank">LinkedIn</a></li>
+		  </ul>
+		</div>
+	  </div>
+
+	  <!-- Scroll to Top Button -->
+	  <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+	  <!-- Loading Animation -->
+	  <div class="loading" id="loading">Memuat...</div>
+
+	  <script src="script.js"></script>
+	</body>
+  </html>
 </html>

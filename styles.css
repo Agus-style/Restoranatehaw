@@ -74,6 +74,62 @@ header p {
   color: #f3e5ab;
 }
 
+/* Tab Content */
+.tab-content {
+  display: none;
+  padding: 1rem;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Tentang Kami */
+.about-photo {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.about-photo img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-media h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #4b3832;
+}
+
+.social-media ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-media ul li {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.social-media ul li a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #d17a22;
+  transition: color 0.3s ease;
+}
+
+.social-media ul li a:hover {
+  color: #4b3832;
+}
+
 /* Cards */
 .menu-grid {
   display: flex;
