@@ -29,7 +29,7 @@ header {
 }
 
 header .logo {
-  width: 80px;
+  width: 300px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -37,6 +37,14 @@ header .logo {
 header h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
+  color: #4b3832;
+}
+
+header h2 {
+  font-family: 'Great Vibes', cursive;
+  padding: 0.5rem 1rem;
+  margin: 0 0.3rem;
+  font-size: 6rem;
   color: #4b3832;
 }
 
@@ -159,6 +167,25 @@ header p {
   color: #4b3832;
 }
 
+button.add-to-cart {
+  background-color: #d17a22;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.add-to-cart:hover {
+  background-color: #4b3832;
+}
+
+button.add-to-cart:active {
+  background-color: #4b3832;
+}
+
 .card p {
   font-size: 1rem;
   color: #6c5b7b;
@@ -168,4 +195,127 @@ header p {
   font-size: 1.2rem;
   font-weight: bold;
   color: #d17a22;
+}
+
+
+
+/* Keranjang Pesanan */
+.cart {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #4b3832;
+  margin-bottom: 1rem;
+}
+
+#cart-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.remove-item {
+  background-color: #d17a22;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-item:hover {
+  background-color: #4b3832;
+}
+
+#total-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 1rem;
+  color: #d17a22;
+}
+
+/* Tombol Kirim Pesanan */
+#send-order {
+  background-color: #d17a22;
+  color: White;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+#send-order:hover {
+  background-color: #4b3832;
+}
+
+#cancel-order {
+  background-color: #d17a22;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+#cancel-order:hover {
+  background-color: #4b3832;
+}
+
+/* Loading */
+#loading {
+  display: none;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+/* Scroll to Top */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d17a22;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-top:hover {
+  background-color: #4b3832;
+  transform: scale(1.1);
+}
+
+.scroll-top.show {
+  display: block;
 }
